@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" minHeight="500" minWidth="500" spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="15.0" left="12.0" right="12.0" top="15.0" />
+    </padding>
+    <children>
+        <VBox alignment="CENTER">
+            <Label text="Vehicle Name:" />
+            <TextField fx:id="vehicleNameField" maxWidth="200" />
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label text="Brand:" />
+            <TextField fx:id="brandField" maxWidth="200" />
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label text="Price:" />
+            <TextField fx:id="priceField" maxWidth="200" />
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label text="Seats:" />
+            <TextField fx:id="seatField" maxWidth="200" />
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label text="Segment:" />
+            <ComboBox fx:id="segmentField" maxWidth="200" />
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label text="Fuel Economy:" />
+            <TextField fx:id="fuelField" maxWidth="200" />
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label text="Gearbox:">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets></Label>
+            <ComboBox fx:id="gearboxField" maxWidth="200" />
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+        </VBox>
+        <Button fx:id="saveButton" alignment="CENTER" onAction="#saveVehicle" prefHeight="26.0" prefWidth="201.0" text="Save">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Button>
+        <Button fx:id="backButton" alignment="CENTER" onAction="#closeDialog" prefHeight="26.0" prefWidth="203.0" text="Back" />
+    </children>
+</VBox>

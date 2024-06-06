@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaasg.SalesReportController">
+   <top>
+      <VBox alignment="TOP_RIGHT">
+         <fx:include source="navigation-menu.fxml" />
+        <HBox alignment="CENTER" prefHeight="49.0" prefWidth="1480.0" HBox.hgrow="ALWAYS">
+            <children>
+                <Label prefHeight="38.0" prefWidth="233.0" text="Sales Report">
+                    <font>
+                        <Font name="System Bold" size="26.0" />
+                    </font>
+                  <HBox.margin>
+                     <Insets right="1000.0" />
+                  </HBox.margin>
+                </Label>
+               <ComboBox fx:id="yearComboBox" prefHeight="26.0" prefWidth="158.0" promptText="Year">
+                  <HBox.margin>
+                     <Insets right="10.0" />
+                  </HBox.margin></ComboBox>
+               <ComboBox fx:id="monthComboBox" prefHeight="26.0" prefWidth="158.0" promptText="Month">
+               </ComboBox>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </HBox>
+         <HBox alignment="TOP_RIGHT" prefHeight="6.0" prefWidth="1480.0">
+            <children>
+               <Label fx:id="totalSalesLabel" text="Total Sales: ">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font>
+               </Label>
+            </children>
+            <VBox.margin>
+               <Insets bottom="10.0" right="10.0" />
+            </VBox.margin>
+         </HBox>
+      </VBox>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <center>
+            <TableView fx:id="ViewReport" focusTraversable="false" prefHeight="200.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="numberColumn" editable="false" prefWidth="75.0" resizable="false" sortable="false" text="No." />
+                  <TableColumn fx:id="vehicleColumn" editable="false" prefWidth="366.39998626708984" resizable="false" text="Vehicle" />
+                  <TableColumn fx:id="customerColumn" editable="false" minWidth="0.0" prefWidth="175.0" text="Customers" />
+                  <TableColumn fx:id="emailColumn" editable="false" prefWidth="200.0" text="Customers' email" />
+                  <TableColumn fx:id="pickupColumn" editable="false" prefWidth="175.0" text="Pickup Date" />
+                  <TableColumn fx:id="returnColumn" editable="false" prefWidth="175.0" text="Return Date" />
+                  <TableColumn fx:id="daysColumn" editable="false" prefWidth="170.4000244140625" text="Rental Duration (Days)" />
+                  <TableColumn fx:id="priceColumn" prefWidth="139.9998779296875" text="Total Price (RM)" />
+               </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </center>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</BorderPane>

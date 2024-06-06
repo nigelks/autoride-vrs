@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="viewsContainer" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaasg.RentVehiclesController">
+   <children>
+      <BorderPane fx:id="rentVehicleBorderPane" prefHeight="800.0" prefWidth="1500.0">
+         <center>
+             <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity">
+                      <VBox fx:id="rentalVBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="450.0" spacing="20" style="-fx-background-color: #f9f9f9; -fx-border-width: 1; -fx-border-color: #808080; -fx-border-radius: 6;">
+                  <VBox style="-fx-background-color: #F4F4F4; -fx-background-radius: 6;">
+                     <children>
+                               <Label text="1. Rental Details" underline="true">
+                                  <font>
+                                     <Font name="System Bold" size="19.0" />
+                                  </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                               </Label>
+                               <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 6;">
+                                  <children>
+                                          <ImageView fx:id="carImageView" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                        <HBox.margin>
+                                           <Insets right="20.0" />
+                                        </HBox.margin>
+                                     </ImageView>
+                                     <VBox maxHeight="-Infinity" maxWidth="-Infinity" spacing="5.0">
+                                        <children>
+                                                <Label fx:id="carNameLabel" text="Car Name">
+                                                    <font>
+                                                        <Font name="System Bold" size="13.0" />
+                                                    </font>
+                                                </Label>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Segment: " />
+                                          <Label fx:id="carSegmentLabel" text="Segment value" textFill="#bfb8b8" />
+                                       </children>
+                                    </HBox>
+                                    <Region prefHeight="200.0" prefWidth="200.0" />
+                                    <HBox>
+                                       <children>
+                                          <Label text="Price: ">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="carPriceLabel" text="Price value">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                        </children>
+                                     </VBox>
+                                  </children>
+                                  <VBox.margin>
+                                     <Insets />
+                                  </VBox.margin>
+                                  <padding>
+                                     <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                  </padding>
+                               </HBox>
+                     </children>
+                  </VBox>
+                         <HBox maxHeight="-Infinity" prefWidth="300.0" spacing="20.0">
+                            <children>
+                               <VBox maxHeight="-Infinity" maxWidth="-Infinity" spacing="10.0">
+                                  <children>
+                                          <Label text="Pickup Date" />
+                                          <DatePicker fx:id="pickupDatePicker" focusTraversable="false" prefWidth="350.0" />
+                                  </children>
+                               </VBox>
+                               <VBox maxHeight="-Infinity" maxWidth="-Infinity" spacing="10.0">
+                                  <children>
+                                          <Label text="Return Date" />
+                                          <DatePicker fx:id="returnDatePicker" focusTraversable="false" prefWidth="350.0" />
+                                  </children>
+                               </VBox>
+                            </children>
+                         </HBox>
+                         <VBox spacing="10.0">
+                            <children>
+                                    <Label text="Pickup and Return Location" />
+                        <ComboBox fx:id="dropoffLocationMenu" prefHeight="26.0" prefWidth="408.0" promptText="Choose Location" />
+                            </children>
+                         </VBox>
+                         <Label fx:id="totalPrice" focusTraversable="false">
+                            <font>
+                               <Font name="System Bold" size="16.0" />
+                            </font>
+                         </Label>
+                         <HBox prefWidth="200.0" spacing="15.0">
+                            <children>
+                               <Button fx:id="BackButton" onAction="#goBack" prefWidth="350.0" style="-fx-border-color: #808080; -fx-border-radius: 3;" text="Back">
+                                  <font>
+                                     <Font size="14.0" />
+                                  </font>
+                                  <padding>
+                                     <Insets bottom="10.0" top="10.0" />
+                                  </padding>
+                               </Button>
+                               <Button fx:id="checkoutButton" onAction="#checkOut" prefWidth="350.0" style="-fx-border-color: #808080; -fx-border-radius: 3;" text="Proceed to Checkout">
+                                  <font>
+                                     <Font size="14.0" />
+                                  </font>
+                                  <padding>
+                                     <Insets bottom="10.0" top="10.0" />
+                                  </padding>
+                               </Button>
+                            </children>
+                         </HBox>
+                         <padding>
+                            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                         </padding>
+                      </VBox>
+               <VBox fx:id="checkoutVBox" spacing="20.0" style="-fx-background-color: #f9f9f9; -fx-border-width: 1 1 1 0; -fx-border-color: #808080; -fx-border-radius: 0 6 6 0;" visible="false">
+                  <padding>
+                     <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                  </padding>
+               </VBox>
+             </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

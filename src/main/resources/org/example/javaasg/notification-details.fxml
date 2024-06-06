@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-border-color: #333; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-color: #fff; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaasg.NotificationDetailsController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <ImageView fitHeight="282.0" fitWidth="419.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../assets/static/icons/carnotificationicon.png" />
+      </image>
+      <VBox.margin>
+         <Insets bottom="20.0" />
+      </VBox.margin>
+   </ImageView>
+    <Label fx:id="titleLabel" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #333; -fx-padding: 10;" text="Title" />
+    <Label fx:id="messageLabel" style="-fx-font-size: 16; -fx-text-fill: #666; -fx-padding: 10;" text="Message" wrapText="true" />
+    <Label fx:id="vehiclesLabel" style="-fx-font-size: 16; -fx-text-fill: #666; -fx-padding: 10;" text="Vehicles" wrapText="true" />
+    <Label fx:id="locationLabel" style="-fx-font-size: 16; -fx-text-fill: #666; -fx-padding: 10;" text="Pickup and Return Location - APU " wrapText="true" />
+    <Label fx:id="pickupLabel" style="-fx-font-size: 16; -fx-text-fill: #666; -fx-padding: 10;" text="Pickup Date" />
+    <Label fx:id="returnLabel" style="-fx-font-size: 16; -fx-text-fill: #666; -fx-padding: 10;" text="Return Date" />
+    <Label fx:id="durationLabel" style="-fx-font-size: 16; -fx-text-fill: #666; -fx-padding: 10;" text="Rental Duration" />
+    <Label fx:id="priceLabel" style="-fx-font-size: 16; -fx-text-fill: #666; -fx-padding: 10;" text="Total Price" />
+</VBox>

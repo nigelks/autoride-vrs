@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" spacing="20.0" style="-fx-background-color: #f9f9f9; -fx-border-width: 1 1 1 0; -fx-border-color: #808080; -fx-border-radius: 0 6 6 0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaasg.CheckoutController">
+       <VBox alignment="CENTER_LEFT" style="-fx-background-color: #F4F4F4; -fx-background-radius: 6;">
+           <Label text="2. Booking Summary" underline="true">
+           <font>
+              <Font name="System Bold" size="19.0" />
+           </font>
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="carName" text="Label">
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </Label>
+      <Label fx:id="rentalDuration" text="Label">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="pricePerDay" text="Label">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="checkoutPrice" text="Label">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </Label>
+      <padding>
+         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+      </padding>
+           <!-- Rest of your labels for order summary -->
+       </VBox>
+       <VBox alignment="CENTER_LEFT" maxWidth="600" style="-fx-background-color: #F4F4F4; -fx-background-radius: 6;">
+           <Label text="3. Enter payment details" underline="true">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </Label>
+      <VBox>
+         <children>
+            <StackPane alignment="CENTER_RIGHT">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <children>
+                       <TextField fx:id="cardNumber" maxWidth="321.0" promptText="Card Number" style="-fx-pref-width: 400px;" />
+                   <ImageView fx:id="cardLogo" fitHeight="20" fitWidth="60" pickOnBounds="true" preserveRatio="true">
+                     <StackPane.margin>
+                        <Insets right="5.0" />
+                     </StackPane.margin></ImageView>
+               </children>
+            </StackPane>
+                 <HBox alignment="CENTER" spacing="20">
+                     <TextField fx:id="expiryDate" maxWidth="-Infinity" promptText="MM/YY" style="-fx-pref-width: 150px;">
+                  <HBox.margin>
+                     <Insets bottom="10.0" />
+                  </HBox.margin>
+               </TextField>
+                     <TextField fx:id="CVV" promptText="CVV" style="-fx-pref-width: 150px;">
+                  <HBox.margin>
+                     <Insets bottom="10.0" />
+                  </HBox.margin>
+               </TextField>
+                 </HBox>
+                 <TextField fx:id="cardName" maxWidth="321.0" prefWidth="325.0" promptText="Name on Card" style="-fx-pref-width: 400px;">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" spacing="10.0">
+         <children>
+                  <Button fx:id="cancelOrder" mnemonicParsing="false" onAction="#cancelOrder" style="-fx-padding: 10px;" text="Cancel Order">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+                  <Button fx:id="placeOrder" onAction="#placeOrder" style="-fx-border-width: 1px; -fx-border-color: #008000; -fx-border-radius: 5px; -fx-padding: 10px; -fx-background-color: #ebe6e6;" text="Place Order">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <padding>
+         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+      </padding>
+       </VBox>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+   </VBox>

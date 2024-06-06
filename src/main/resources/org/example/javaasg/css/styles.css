@@ -1,0 +1,6 @@
+.root{
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url("/assets/static/hero.jpg");
+}
